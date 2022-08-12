@@ -1,0 +1,34 @@
+<html>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="renderWatchlist()">
+
+  <header>
+    <h1>My Watchlist</h1>
+    <h2><a href="index.html">Search for movies</a></h2>
+  </header>
+  <main>
+
+    <section id="empty-watchlist" class="empty-search">
+      <p class="empty-search-text"> Your watchlist is looking a little empty </p>
+      <div class="watchlist-btn">
+        <a href="index.html" class=""> <img src="images/PlusIcon.png" alt ="plus"/> Let's add some movies!</a>
+      </div>
+    </section>
+
+    <section id="watchlist" class="film-cards">
+
+    </section>
+
+
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

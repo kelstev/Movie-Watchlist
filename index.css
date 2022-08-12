@@ -1,0 +1,210 @@
+html, body {
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+header {
+  padding: 50px 10%;
+  background-image: url("images/HeaderImg.png");
+  background-size: cover;
+  background-color: #404040;
+  background-blend-mode: multiply;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.67rem;
+  color: #ffffff;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+h2 {
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+h3 {
+  font-size: 1.125rem;
+  color: #000000;
+  font-weight: 500;
+  padding-right: 20px;
+  /* bottom margin to keep total results separate from movie search */
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+h4 {
+  font-size: 0.75rem;
+  color: #111827;
+  font-weight: 400;
+  padding-right: 20px;
+  margin: 0;
+}
+
+p {
+  font-size: 0.875rem;
+  color: #6B7280;
+  font-weight: 400;
+}
+
+a {
+  font-size: 0.875rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  background-color: #6B7280;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+}
+
+a:hover, a:active {
+  background-color: #DFDDDD;
+  color: #000000;
+}
+
+a img {
+  padding-right: 10px;
+  align-self: center;
+}
+
+header a {
+  background-color: inherit;
+}
+
+.empty-search-text {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #DFDDDD;
+}
+
+/* Buttons - Watchlist */
+.btn {
+  font-size: 0.75rem;
+  color: #111827;
+  background-color: inherit;
+  font-weight: 400;
+  padding: 5px;
+  max-width: 150px;
+  border: 1px solid #D1D5DB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+
+button img {
+  padding-right: 5px;
+}
+
+/* Search Section */
+#search {
+  margin: 0 auto 10px;
+  background-color: #ffffff;
+  border: 1px solid #D1D5DB;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  top: -15px;
+  width: 80%;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+input {
+  background: url(images/SearchIcon.png) no-repeat scroll 5px 5px;
+  padding: 5px 0 5px 30px;
+  border: none;
+}
+
+.search-input {
+  overflow: hidden;
+  width: 100%;
+}
+
+#search-btn {
+  color: #374151;
+  border: none;
+  border-left: 1px solid #D1D5DB;
+  padding: 10px 30px;
+  margin: 0;
+  height: 100%;
+}
+
+/* Movie Search Results */
+.film-cards,
+#see-more {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 15px;
+  /* border: 1px solid blue; */
+}
+
+.film-info {
+  display: flex;
+  padding-top: 20px;
+  /* border: 1px solid green; */
+  border-top: 1px solid #D1D5DB;
+  margin-bottom: 15px;
+  max-width: 700px;
+}
+
+.film-poster>img {
+  max-width: 110px;
+  padding-right: 10px;
+}
+
+.film-details {
+  flex-direction: column;
+}
+
+.film-details-row {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+/* Toggle plus and minus icons based on whether movie is in watchlist already */
+button#add-watchlist[add-state="add"]::before {
+  content: url("images/PlusIcon.png");
+  padding-right: 5px;
+}
+
+button#add-watchlist[add-state="remove"]::before {
+  content: url("images/MinusIcon.png");
+  padding-right: 5px;
+}
+
+button#add-watchlist[add-state="remove"] {
+  background-color: #DFDDDD;
+}
+
+/* Empty Search Results Section */
+.empty-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20vh;
+}
+
+.hidden {
+  display: none;
+  visibility: collapse;
+  padding: 0;
+}
